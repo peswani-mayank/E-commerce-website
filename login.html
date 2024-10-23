@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            /* background-image: linear-gradient(to right,rgb(75, 151, 75),rgb(102, 102, 176)); */
+        }
+        #navbar{
+            display: flex;
+            gap:30px;
+            background-color: rgb(122, 122, 216);
+            padding: 30px;
+            margin: 0;
+        }
+        #navbar li{
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #navbar li a{
+            text-decoration: none;
+            color: rgb(46, 117, 46);
+            font-weight: 800 ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: larger;
+        }
+        #heading{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(76, 76, 182);
+        }
+        p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+            color:rgb(235, 192, 91) ;
+        }
+        input{
+            background-color: rgb(224, 225, 227);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            
+        }
+        
+        .formbox{
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 50px;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        #subbtn{
+            background-color: black;
+            color: white;
+        }
+        #subbtn:hover{
+            background-color: rgb(58, 57, 57);
+            scale: 1.1;
+            animation: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        }
+        .main2{
+            background-image: url("https://resortlifestylemag.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Ffnnnzrrp%2Fproduction%2Ffc5ac7085b251ca8887fea0c4d0a82f5f4579807-1280x830.jpg%3Fauto%3Dformat&w=3840&q=75");
+            height: 100vh;
+            width: 50vw;
+            background-repeat: no-repeat;
+            /* background-attachment: fixed; */
+            background-size: cover;
+
+        }
+        #logo{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function data()
+        {
+            var a=document.getElementById("name").value;
+            var a=document.getElementById("e1").value;
+            var a=document.getElementById("p1").value;
+            var a=document.getElementById("u4").value;
+            if(a==""||b==""||c==""||d==""){
+                alert("All fiels are mandatory");
+                return false;
+            }
+             else{
+                 return true;
+             }  
+        }
+    </script>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html"><img id="logo" src="logo1.png"></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li id="lg-bag">
+            <a href="cart.html">
+              <a href="cart.html"><i class="fal fa-bags-shopping"></i></a>
+            </a>
+          </li>
+          <a href="#" id="close"> <i class="far fa-times"></i> </a>
+        </ul>
+      </div>
+      <div class="main">
+    <form onsubmit="return data()" action="index.html">
+        <div class="formbox">
+        <h1 id="heading">Please login to continue</h1>
+        <label for="name" ><p>Name:</p></label>
+        <input  type="text" id="name " placeholder="Mayank" name="myname" required>
+        <br><br>
+        <p>Email:</p> <input type="email" id="e1" name="myemail" placeholder="Example@gmail.com" required><br><br>
+        <p>Password:</p> <input type="password" name="mypassword" id="p1" placeholder="Password" required><br><br>
+        <p>Confirm password:</p><input type="password" id="u4" placeholder="Confirm password">
+        <br>
+        <br>
+        <input type="submit" value="Sign In" id="subbtn">
+        </div>
+
+    </form>
+    <div class="main2">
+        
+    </div>
+    </div>
+</body>
+</html>
